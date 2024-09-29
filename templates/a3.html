@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+Rough 
+{% endblock title %}
+
+{% block body %}
+<form class="my-4" method="post" action="#">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Select Your Doctor</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+            {% for doc in sd %}
+            <option>{{doc.name}} ({{doc.department_name}})  [{{doc.doctor_fees}}]  </option>
+            
+            {% endfor %}
+          
+        </select>
+      </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Name</label>
+        <input type="name" class="form-control" id="exampleFormControlInput1" id="name" name="name"
+            placeholder="Enter ur name ">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" id="email" name="email"
+            placeholder="Enter ur email">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Phone Number</label>
+        <input type="phone" class="form-control" id="exampleFormControlInput1" id="phone" name="phone"
+            placeholder="Enter ur Phone">
+    </div>
+    <div class="form-group">
+        <label for="desc">Give us ur feedback </label>
+        <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+    </div>
+    <br>
+    <br>
+    <button onclick="myfuction()" class="btn btn-primary" type="submit">Submit</button>
+    <script>
+        function myfuction() {
+            alert("Your Feedback has been Submitted.")
+        }
+
+    </script>
+
+
+
+
+
+{% endblock body %}

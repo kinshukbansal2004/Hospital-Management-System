@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Contacts
+{% endblock title %}
+{% block body %}
+<div id="carouselExampleSlidesOnly" class="carousel slide my-4" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" style="opacity:0.5" height = "750px"src="{% static 'images/cont.jpg' %}" alt="First slide">
+        <div class="container-fluid" style="position:absolute; top: 440px; left: 0px;text-align:center; color:black ; background-color:white;background-size:50%;  opacity: 0.8 ;">
+        <div >
+            <p>         </p>
+            <br>
+            <p>         </p>
+            <h1><strong><b>Contacts</b></strong></h1>
+            <br>
+            <h3><strong>Room No 320, Dhanrajgiri 2 Hostel, Varanasi 221105</strong></h3>
+            <br>
+            <h2><strong>Email Id : rejuvenate@care.in </strong></h2>
+            <br>    
+            <h3><strong>Hotline : 0123456482        </strong></h3>
+            <p>         </p>
+            <br>
+            <p>         </p>
+
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+{% endblock body %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Patient Page
+{% endblock title %}
+
+{% block body %}
+<section class="vh-100">
+<div class="content-wrap aligncenter" >
+    <div class="card-body">
+        <br> <br>
+      <h5 class="card-title" style="font-size:30px"> Hello {{sd.name}}!</h5>
+      <h6 class="card-subtitle mb-2 text-muted"style="font-size:30px"> Welcome to your profile</h6>
+      {% for gd in sd1 %}
+      <p class="card-text"style="font-size:30px">Appointment Date : {{gd.apppointment_date}}</p>
+      <p class="card-text"style="font-size:30px">Consulted Doctor : {{gd.doctor_name}} </p>
+      <br>
+      {% endfor %}
+      <a href="/dreamapp/admit"><button class="btn btn-lg btn-primary" style="font-size:px">Admission Form</button></a>
+
+<a href="/dreamapp/discharge"><button class="btn btn-lg btn-danger" style="font-size:px">Discharge Form</button></a>
+
+    </div>
+  </div>
+
+</section>
+{% endblock body %}

@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% block title %}
+Home{% endblock title %}
+{% load static %}
+{% block body %}
+<nav class="navbar navbar-light navbar-expand-lg " style="background-color:white">
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-dark-0">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="background-color:#9e1012;font-family:Sans-serif;font-size:20px; color:white" href="#" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <strong>Services</strong>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" style="font-size:25px" href="/dreamapp/rooms">Wards And Rooms</a></li>
+            <li><a class="dropdown-item" style="font-size:25px" href="/dreamapp/emergency">Emergency</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="background-color:#9e1012;font-family:Sans-serif;font-size:20px;color:white" href="" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <strong>Login</strong>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" style="font-size:25px" href="/dreamapp/patient">Patient Login</a></li>
+            <li><a class="dropdown-item" style="font-size:25px" href="/dreamapp/doctor">Doctor Login</a></li>
+            <li><a class="dropdown-item" style="font-size:25px" href="/admin">Admin Login</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dreamapp/contacts" style="background-color:#9e1012;font-family:Sans-serif;font-size:20px;color:white"><strong>Contacts</strong></a>
+        </li>
+      </ul>
+      <div class="d-flex flex-row-reverse">
+        <a href="/dreamapp/appointment"><button type="button" class="btn btn-danger "
+          style="font-family:serif;font-size:20px; color:white">Book Your Appointment</button></a>
+
+
+      </div>
+    </div>
+  </div>
+</nav>
+<div style="background-color:white" >
+  
+
+<div class="container-fluid">
+  <div class="container-fluid my-400 px-8">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'images/k2.jpg' %}" class="d-block w-100 l=10" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <div >
+                <h5 >Rejuvenate</h5>
+                <p>Giving Power to your Health.</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/k3.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Rejuvenate</h5>
+              <p>Adding Care to your Life.</p>
+            </div>
+          </div>/
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+</div>
+
+<div class="album py-5 " style="background-color:white">
+<div class="container" >
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card mb-4 box-shadow">
+        <img  src="{% static 'images/h18.jpg' %}"  alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">
+            At Rejuvenate, you are so much more than just a patient. Care has been taken to ensure patient-centric design choices, including providing patients a visual connection to the outside environment by bringing natural light.</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4 box-shadow">
+        <img src="{% static 'images/h15.jpg' %}"  alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">At Rejuvenate, you are so much more than just a patient.Maintenance of the hygiene and cleanliness of health facilities is not only related to aesthetics and patient satisfaction, but it also reduces the incidence of Hospital Acquired Infections (HAI).</p>
+        </div>
+      </div>
+    </div>
+     <div class="col-md-4">
+      <div class="card mb-4 box-shadow">
+        <img src="{% static 'images/h33.jpg' %}"  alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">One of the key dimensions of Quality of Care is cleanliness of health facilities. One of the key indicators of patient’s satisfaction relates to her/his perception of cleanliness in health care facilities and hygiene.  </p>
+          
+          </div>
+        </div>
+      </div>
+    </div> 
+    
+  </div>
+</div>
+</div>  
+</div>
+{% endblock body %}

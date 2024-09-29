@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Wards And Rooms
+{% endblock title %}
+
+{% block body %}
+<div class="container">
+    <div id="carouselExampleSlidesOnly" class="carousel slide my-4" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" style="opacity:0.9" height="800px" src="{% static 'images/f.jpg' %}"
+                    alt="First slide">
+                <div class="container-fluid"
+                    style="position:absolute; top: 550px; left: 0px;text-align:center; color:black ; background-color:white;background-size:50%;  opacity: 0.8 ;">
+                    <div>
+                        <p> </p>
+                        <br>
+                        <p> </p>
+
+                        <h1 style="font-size:35px"><strong><b> Wards and Rooms </b></strong></h1>
+                        <br>
+                        <h3><strong>Variety of options for accomodation of patients, relatives and caregivers.</strong>
+                        </h3>
+
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="container">
+
+    <div class="row">
+        {% for rooms in sd %}
+        <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+
+                <div class="card-body">
+                    <p><strong>{{rooms.room_type}}</strong></p>
+                    <p class="card-text">{{rooms.room_desc}}</p>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock body %}
